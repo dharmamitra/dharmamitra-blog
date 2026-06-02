@@ -1,0 +1,23 @@
+<footer class="site-footer">
+  <div class="wrap site-footer__inner">
+    <div class="site-footer__brand">
+      <img src="{{ '/assets/images/dm-logo-1x1.png' | relative_url }}" alt="" height="40" width="40">
+      <div>
+        <strong>Dharmamitra Project</strong>
+        <span>{{ site.tagline }}</span>
+      </div>
+    </div>
+
+    <nav class="site-footer__links" aria-label="Social and external">
+      {% if site.social.github %}<a href="{{ site.social.github }}" target="_blank" rel="noopener">GitHub</a>{% endif %}
+      {% if site.social.youtube %}<a href="{{ site.social.youtube }}" target="_blank" rel="noopener">YouTube</a>{% endif %}
+      {% if site.social.x %}<a href="{{ site.social.x }}" target="_blank" rel="noopener">X</a>{% endif %}
+      {% if site.social.facebook %}<a href="{{ site.social.facebook }}" target="_blank" rel="noopener">Facebook</a>{% endif %}
+      <a href="{{ '/feed.xml' | relative_url }}">RSS</a>
+      {% if site.email %}<a href="mailto:{{ site.email }}">Email</a>{% endif %}
+    </nav>
+  </div>
+  <div class="wrap site-footer__legal">
+    © {{ 'now' | date: "%Y" }} Dharmamitra Project.
+  </div>
+</footer>

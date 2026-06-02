@@ -1,0 +1,26 @@
+---
+layout: default
+---
+<article class="post wrap">
+  <header class="post__header">
+    <a class="post__back" href="{{ '/' | relative_url }}">← All posts</a>
+    <h1 class="post__title">{{ page.title | escape }}</h1>
+    <div class="post__meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time>
+      {% if page.author %}<span class="post__author">· {{ page.author }}</span>{% endif %}
+    </div>
+    {% if page.tags.size > 0 %}
+    <div class="post__tags">
+      {% for tag in page.tags %}<span class="tag">{{ tag }}</span>{% endfor %}
+    </div>
+    {% endif %}
+  </header>
+
+  <div class="post__body content">
+    {{ content }}
+  </div>
+
+  <footer class="post__footer">
+    <a class="post__back" href="{{ '/' | relative_url }}">← All posts</a>
+  </footer>
+</article>

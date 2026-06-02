@@ -1,0 +1,69 @@
+# --- Site settings ---
+title: Dharmamitra Blog
+tagline: Research news & updates from the Dharmamitra Project
+description: >-
+  Research news, releases, and updates from the Dharmamitra Project —
+  AI tools for the study of Buddhist and classical Asian languages.
+author: Dharmamitra Project
+email: dharmamitra.project@gmail.com
+lang: en
+
+# --- URL ---
+# For project pages served at https://dharmamitra.github.io/dharmamitra-blog
+# If you set up a custom domain (CNAME), set `url` to it and `baseurl` to "".
+url: "https://dharmamitra.github.io"
+baseurl: "/dharmamitra-blog"
+
+# --- Social / external links (used in the footer) ---
+social:
+  github: https://github.com/dharmamitra
+  youtube: https://www.youtube.com/@dharmamitra_ucb
+  x: https://x.com/dharmamitra_ucb
+  facebook: https://www.facebook.com/people/Dharmamitra-Project/61578013388240/
+main_site: https://dharmamitra.org
+
+# --- Build settings ---
+markdown: kramdown
+highlighter: rouge
+permalink: /:year/:month/:day/:title/
+timezone: Etc/UTC
+
+# Show the N most recent posts on the home page (0 = all)
+paginate: 0
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    block:
+      line_numbers: false
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Default front matter so authors only need a title + date
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: page
+
+# Collections / read order
+sass:
+  style: compressed
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor
+  - .github
+  - node_modules
