@@ -91,8 +91,15 @@ img { max-width: 100%; height: auto; }
   gap: 1rem;
 }
 .site-logo { display: flex; align-items: center; }
-.site-logo img { display: block; }
+/* Match the main site's app-bar logo size (~145px wide, native 240x66 ratio).
+   Explicit height needed because the global `img { height: auto }` rule would
+   otherwise override the HTML height attribute and blow the logo up full-width. */
+.site-logo img { display: block; width: auto; height: 40px; }
 .site-logo:hover { text-decoration: none; }
+
+@media (max-width: 520px) {
+  .site-logo img { height: 34px; }
+}
 
 .site-nav {
   display: flex;
