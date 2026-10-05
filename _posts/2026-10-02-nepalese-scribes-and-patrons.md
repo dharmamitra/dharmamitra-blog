@@ -49,7 +49,7 @@ manuscripts. The 1992 reprint was OCR'd with Chandra (datalab), which reads the
 Devanāgarī colophons well, and parsed into 248 entries. Composite numbers such as
 Add. 1680 were split into their parts, giving 319 manuscripts.
 
-**The Licchavi inscriptions.** I have used a collection of e-text editions of 198 inscriptions of the Licchavi period (5th–9th century), each with a concordance to the editions of Gnoli,
+**The Licchavi inscriptions.** I have used a collection of e-text editions of 198 inscriptions of the Licchavi period (5th–9th century) prepared by D. N. Lielukhine, each with a concordance to the editions of Gnoli,
 Dhanavajra Vajracarya, Regmi and others.
 
 ## Reading the colophons
