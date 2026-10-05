@@ -12,7 +12,7 @@ description: >-
 
 ![The early part of the timeline, with the detail panel for a scribe]({{ '/assets/images/nepalese-scribes-timeline.png' | relative_url }})
 
-When I was working for the NGMCP, looking at colophons, I had the idea that what if we collect all the names and dates from the colophons, and build a register of the people named in Nepalese manuscripts? I was interested in teacher disciple relationships. I thought we might have a nice lineage of teachers and scholars who wrote the manuscripts. In this way, if some manuscripts were not dated, we might have an approximate idea of when they were written. The same in fact goes with scribe, patrons, kings, and other people who contributed to the manuscripts. Little had I known, that a study like this is called prosopography.
+When I was working for the NGMCP, looking at colophons, I wondered: what if we collect all the names and dates from the colophons, and build a register of the people named in Nepalese manuscripts? I was interested in teacher-disciple relationships. I thought we might have a nice lineage of teachers and scholars who wrote the manuscripts. In this way, if some manuscripts were not dated, we might have an approximate idea of when they were written. The same in fact goes with scribe, patrons, kings, and other people who contributed to the manuscripts. Little had I known, that a study like this is called prosopography.
 
 I started to experiment a little but very quickly gave up. It is so much work. I believe many people have had such an idea but the impracticality of the task must have kept many from pursuing it.
 
@@ -54,9 +54,9 @@ Dhanavajra Vajracarya, Regmi and others.
 
 ## Reading the colophons
 
-[Mostly Claude Opus's prose below. The author's text is in the brackets.]
+In the following, much of the text was prepared by Claude. The parts that were mostly AI-written are enclosed in quotation marks; my own remarks within them are in square brackets. They describe how the chart was prepared.
 
-Each colophon (and each inscription) was read by a language model to detect human names.
+"Each colophon (and each inscription) was read by a language model to detect human names.
 Gemini Flash made a first reading of 3,775 texts and returned every human name
 with their roles (scribe, commissioner, donor, owner, king, dūtaka, official, …),
 titles, residence and the evidence in the text, along with the relations between
@@ -66,40 +66,40 @@ read the text a second time, given the first reading (693 texts). The second pas
 often corrected roles and names: for example, it separated a commentator's father
 from the people who made the copy, read a corrupt chronogram, or noticed that
 *śukla-pañce* in an OCR'd colophon stands for *śukla-pakṣe*, so that no tithi is
-stated.
+stated."
 
-Names were then grouped across manuscripts by a normalised form without honorifics
+"Names were then grouped across manuscripts by a normalised form without honorifics
 and caste or office titles. [AI determined what are honorifics, caste or office titles, too.] Homonyms are separated by date only: a name becomes two persons where its dated
 attestations are more than 40 years apart, or where one career would exceed 60 years. [Another AI implementation] The result is a
 register of 2,824 persons: 1,504 scribes, 522 patrons and owners, 276 kings, 222
 officials, teachers and others, and 300 relatives named only to identify someone,
-linked by 1,027 explicit relations.
+linked by 1,027 explicit relations."
 
 ## Dates from the colophons, checked by the weekday
 
-Catalogues in most cases convert dates with a fixed offset (Nepāla Saṃvat + 880, Vikrama
-Saṃvat − 57) without actually calculating them. That is right to within a year at best. Nepāla Saṃvat begins in Kārttika, so a date in Kārttika to Pauṣa falls a year earlier than the offset says, and the offset tells us nothing about whether the date is sound at all.
+"Catalogues in most cases convert dates with a fixed offset (Nepāla Saṃvat + 880, Vikrama
+Saṃvat − 57) without actually calculating them. That is right to within a year at best. Nepāla Saṃvat begins in Kārttika, so a date in Kārttika to Pauṣa falls a year earlier than the offset says, and the offset tells us nothing about whether the date is sound at all."
 
-Every date was therefore recalculated from the elements the colophon states (era,
+"Every date was therefore recalculated from the elements the colophon states (era,
 year, month, pakṣa, tithi, weekday, nakṣatra) [with a modified version of] the *Pañcāṅga* program of Michio
 Yano and Makoto Fushimi, computed for Kathmandu. [The modification added the Nepala saṃvat as a possible calendar choice.] Where a weekday is stated, the
 date can be checked: the computed day must fall on that weekday. About 1,060 NGMCP
-colophons state enough to be checked this way.
+colophons state enough to be checked this way."
 
-The data themselves settle some conventions. Under the standard reading, two thirds
+"The data themselves settle some conventions. Under the standard reading, two thirds
 of the fully stated Nepāla Saṃvat dates fall on the stated weekday, against one in
 seven by chance, with amānta months. Vikrama and Śaka dates in the dark fortnight
 match only with pūrṇimānta months (97 against 17 for Vikrama). Lakṣmaṇasena dates
 match at chance level under every epoch from LS + 1103 to + 1123, so they are
-converted but never called verified.
+converted but never called verified."
 
-How much does "verified" mean? To find out, every date was checked a second time with
+"How much does 'verified' mean? To find out, every date was checked a second time with
 its weekday deliberately moved by two, three or four days. Only about one wrong date
 in twenty passes as verified. Allowing one departure from the standard reading (a
 tithi current later in the day, or the other month system) rescues about half of
 the real dates that fail, and about one wrong date in ten. Other departures (a
 current year, a Kārttikādi year) fit wrong dates almost as often as right ones and
-are accepted only together with a matching nakṣatra.
+are accepted only together with a matching nakṣatra."
 
 | NGMCP dates (3,392 in all) | number |
 |---|---:|
@@ -109,27 +109,29 @@ are accepted only together with a matching nakṣatra.
 | computed (month and tithi, no weekday) | 1,166 |
 | year only (± 1) | 1,167 |
 
-397 dates move by a year or more. Most are the Kārttika–Pauṣa cases. 34 move by more
+"397 dates move by a year or more. Most are the Kārttika–Pauṣa cases. 34 move by more
 than a year, because the colophon's own year verifies and the catalogue's does not:
 A 980/20 is NS 949 (1829), not the catalogue's NS 494; the chronogram of A 177/18
 yields 991 and verifies, nakṣatra and all, as Wednesday 21 June 1871. Paper
 manuscripts dated before 1300 (31) are treated as undated: their years are
-abbreviated or misread, or belong to the exemplar.
+abbreviated or misread, or belong to the exemplar."
 
 
-[The AI was prompted to recalculate Bendall's dates for the reason that immediately follows.]
-Bendall converted his dates himself, at a time when the Nepalese calendar was little
+I prompted Claude to recalculate Bendall's dates for the reason that immediately follows.
+
+"Bendall converted his dates himself, at a time when the Nepalese calendar was little
 understood. Add. 866, the Aṣṭasāhasrikā copied in the joint reign of Nirbhaya and
 Rudradeva, is not 1008 but Monday 31 January 1009, a year later than the standard
 reading, which the stated Uttarabhādrapadā supports. Add. 1348 is not A.D. 1807 but
 1817 (NS 937). Add. 1703 confirms Bendall's NS 549 against the OCR's 547: Saturday
-3 September 1429, with Viśākhā as stated.
+3 September 1429, with Viśākhā as stated."
 
 ## The Aṃśuvarman Saṃvat
 
-[I also instructed the AI to recalculate all the Aṃśuvarman/Mānadeva saṃvat dates.]
-Bendall dated Add. 1049 by the Harṣa era. Following Kamal P. Malla ("Mānadeva
-Samvat: an investigation into an historical fraud", *Contributions to Nepalese
+I also instructed Claude to recalculate all the Aṃśuvarman/Mānadeva saṃvat dates.
+
+"Bendall dated Add. 1049 by the Harṣa era. Following Kamal P. Malla ('Mānadeva
+Samvat: an investigation into an historical fraud', *Contributions to Nepalese
 Studies* 32.1, 2005), the so-called Mānadeva saṃvat is not an era of its own but the
 Kārttikādi current Śaka with 500 dropped, used from Aṃśuvarman's year 29, and the
 earlier Licchavi saṃvat (386–535) is the same era [basically the Śaka] with the hundreds kept. This
@@ -139,18 +141,18 @@ gold repoussé at Cāṅgu (saṃvat 31 Māgha śukla 13, Sunday, Puṣya) falls
 Sunday, Puṣya) on Sunday 13 April 878. It also gives NS 1 = AS 304, the traditional
 reckoning. The repoussé needs one more adjustment: before about 1100, intercalary
 months were set by the mean sun, so a lunation could carry its neighbour's name, and
-our program, which uses the true sun, calls that lunation Phālguna.
+our program, which uses the true sun, calls that lunation Phālguna."
 
-On this reading Add. 1049 dates from 829, and Mānadeva's Cāṅgu pillar (saṃvat 386
+"On this reading Add. 1049 dates from 829, and Mānadeva's Cāṅgu pillar (saṃvat 386
 Jyeṣṭha śukla 1, Rohiṇī) from 5 May 463, a year before the usual 464. On that day
 the moon is in Rohiṇī at sunrise, as the inscription says, whereas on the usual
 date it is in Kṛttikā. This favours Malla's reading only slightly, since the
 inscription names a midday muhūrta. Apart from the repoussé, no Licchavi date can be
-verified, and the chart says so for each of them.
+verified, and the chart says so for each of them."
 
 ## The chart
 
-The chart lists persons on a timeline by their dated attestations and shows, for
+"The chart lists persons on a timeline by their dated attestations and shows, for
 the selected person, each manuscript or inscription with its date (and how it was
 obtained), the role, the evidence in the colophon, and the other people named with
 them. A network view places persons by date and links kin, teacher and pupil,
@@ -158,9 +160,11 @@ scribe and patron, and subjects and their king. Undated manuscripts get an estim
 date from the kings and people they name (232 estimates). The register runs from
 Mānadeva in the fifth century, through Aṃśuvarman and the later Licchavis, the
 kings of the Transitional period, and the Mallas of the three cities (Bhūpatīndra
-Malla of Bhaktapur appears in 87 manuscripts), to the Śāha period.
+Malla of Bhaktapur appears in 87 manuscripts), to the Śāha period."
 
 ## Limitations
+
+The following is all written by Claude:
 
 - The register is only as good as the catalogue's quotations and the models'
   readings of them. Each attestation is marked with its source (catalogue field,
