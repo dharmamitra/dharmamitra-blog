@@ -12,13 +12,13 @@ description: >-
 
 ![The early part of the timeline, with the detail panel for a scribe]({{ '/assets/images/nepalese-scribes-timeline.png' | relative_url }})
 
-When I was working for the NGMCP, looking at colophons, I wondered: what if we collect all the names and dates from the colophons, and build a register of the people named in Nepalese manuscripts? I was interested in teacher-disciple relationships. I thought we might have a nice lineage of teachers and scholars who wrote the manuscripts. In this way, if some manuscripts were not dated, we might have an approximate idea of when they were written. The same in fact goes with scribe, patrons, kings, and other people who contributed to the manuscripts. Little had I known, that a study like this is called prosopography.
+When I was working for the Nepalese-German Manuscript Cataloguing Project (NGMCP), looking at colophons, I wondered: what if we collect all the names and dates from the colophons, and build a register of the people named in Nepalese manuscripts? I was interested in teacher-disciple relationships. I thought we might have a nice lineage of teachers and scholars who were involved in the production of manuscripts. In this way, if a manuscript was not dated but a person's name was mentioned, we might have an approximate idea of when they were written. The same goes for scribes, patrons, kings, and other people who contributed to the manuscripts. Little did I know that a study like this is called prosopography.
 
 I started to experiment a little but very quickly gave up. It is so much work. I believe many people have had such an idea but the impracticality of the task must have kept many from pursuing it.
 
-Things changed. What I present here was prepared in less than 6 hours. Granted, I already had necessary data in the electronic form. Still, I would have had to write a lot of code to process it, checking results every time and improving codes. The original electronic data had so many inconsistencies. This is an example of how AI can help massively accelerate research.
+Things changed. What I present here was prepared in less than six hours. Granted, I already had the necessary data in electronic form. Still, I would have had to write a lot of code to process it, checking the results every time and improving the code. The original electronic data had so many inconsistencies. This is an example of how AI can help massively accelerate research.
 
-This post reports on an attempt to present an aggregate of a register of the people named in Nepalese manuscripts and in the Licchavi inscriptions, with their dates, roles and relations, and an interactive chart through which it can be explored.
+This post presents a register of the people named in Nepalese manuscripts and in the Licchavi inscriptions, with their dates, roles and relations, and an interactive chart through which it can be explored.
 
 - **Chart:** [kengoharimoto.github.io/nepalese-scribes](https://kengoharimoto.github.io/nepalese-scribes/)
 - **Data and code:** [github.com/kengoharimoto/nepalese-scribes](https://github.com/kengoharimoto/nepalese-scribes)
@@ -27,8 +27,8 @@ This post reports on an attempt to present an aggregate of a register of the peo
 
 ## Sources
 
-**The NGMCP data.** The data from the Nepal-German Manuscript Cataloguing Project
-(NGMCP) came in two forms. One is a collection of html files that was converted from the orignal Word files (gasp) that the catalogers produced when the project was run. The html files in turn became the source of the NGMCP descriptive catalogue that existed as a wiki. They cover 13,382 entries covering 11,861 microfilmed manuscripts. Each entry quotes the
+**The NGMCP data.** The data from the Nepalese-German Manuscript Cataloguing Project
+(NGMCP) came in two forms. One is a collection of html files that was converted from the original Word files (gasp) that the catalogers produced during the project. The html files in turn became the source of the NGMCP descriptive catalogue that existed as a wiki. There are 13,382 entries covering 11,861 microfilmed manuscripts. Each entry quotes the
 beginning, end and colophon of the manuscript and has fields for scribe, date, place,
 king and donor. The entries were written by many cataloguers over two decades, and
 the fields are far from uniform: "Devanagari" appears in some sixty spellings, the
@@ -36,11 +36,11 @@ material in 138 forms, and notes are often typed into the wrong field. The entri
 were parsed into a database with every field normalised next to its original
 value, and joined with the NGMCP title list (117,407 titles). The join brings out
 5,918 places where the two disagree (folio counts, sizes, dates), and 2,899
-manuscripts that were microfilmed more than once (3,033 retakes). And this process of detecting the inconsistencies and coming up with a consistent view of the data would have been very impractical for a human. AI did these in less than 10 minutes.
+manuscripts that were microfilmed more than once (3,033 retakes). And this process of detecting the inconsistencies and coming up with a consistent view of the data would have been very impractical for a human. AI did this in less than 10 minutes.
 
-Another data came from the NGMCP title list online application. It was a data dump produced as a backup of the database. It had 117,407 entries.
+The other dataset came from the NGMCP title list online application. It was a data dump produced as a backup of the database. It had 117,407 entries.
 
-Merging these two datasets, which originally had very different data structure, would have been very impractical for a human.
+Merging these two datasets, which originally had very different data structures, would have been very impractical for a human.
 
 **Bendall's Cambridge catalogue.** Cecil Bendall's *Catalogue of the Buddhist
 Sanskrit Manuscripts in the University Library, Cambridge* (1883) describes the
@@ -69,7 +69,7 @@ from the people who made the copy, read a corrupt chronogram, or noticed that
 stated."
 
 "Names were then grouped across manuscripts by a normalised form without honorifics
-and caste or office titles. [AI determined what are honorifics, caste or office titles, too.] Homonyms are separated by date only: a name becomes two persons where its dated
+and caste or office titles. [AI also determined what counts as an honorific or a caste or office title.] Homonyms are separated by date only: a name becomes two persons where its dated
 attestations are more than 40 years apart, or where one career would exceed 60 years. [Another AI implementation] The result is a
 register of 2,824 persons: 1,504 scribes, 522 patrons and owners, 276 kings, 222
 officials, teachers and others, and 300 relatives named only to identify someone,
@@ -82,7 +82,7 @@ Saṃvat − 57) without actually calculating them. That is right to within a ye
 
 "Every date was therefore recalculated from the elements the colophon states (era,
 year, month, pakṣa, tithi, weekday, nakṣatra) [with a modified version of] the *Pañcāṅga* program of Michio
-Yano and Makoto Fushimi, computed for Kathmandu. [The modification added the Nepala saṃvat as a possible calendar choice.] Where a weekday is stated, the
+Yano and Makoto Fushimi, computed for Kathmandu. [The modification added the Nepāla Saṃvat as a possible calendar choice.] Where a weekday is stated, the
 date can be checked: the computed day must fall on that weekday. About 1,060 NGMCP
 colophons state enough to be checked this way."
 
