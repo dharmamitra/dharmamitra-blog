@@ -72,7 +72,7 @@ of the e-texts.
 
 How reliable is the result? Against the dictionaries of Monier-Williams and Apte, Negi and Hirakawa, the top-ranked
 sense of headwords with at least 100 attestations is confirmed in 75–90% of the cases, and one of the five
-top-ranked senses in 94–99%. These are lower bounds, since many senses that a reference lacks are plain renderings
+top-ranked senses in 93–99%. These are lower bounds, since many senses that a reference lacks are plain renderings
 it does not record. For Sanskrit–English, three Sanskritists corrected the alignments of 100 sentences
 independently. The spans of the model reach a precision of about 90% and agree with each annotator about as closely
 as the annotators agree with each other. The gold alignments are released with the data.
