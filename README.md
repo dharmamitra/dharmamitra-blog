@@ -19,6 +19,7 @@ accents, light-pink panels). **Posts publish automatically** when pushed to
    title: "Your post title"
    date: 2026-06-15
    author: Your Name
+   category: updates
    tags: [release, research]
    description: One-line summary shown on the home page and in search results.
    ---
@@ -32,9 +33,27 @@ accents, light-pink panels). **Posts publish automatically** when pushed to
 That's it. The [GitHub Actions workflow](.github/workflows/pages.yml) rebuilds
 the site and deploys it within a minute or two.
 
-> **Tip:** `date:` controls ordering and the post's URL. `tags:` and
-> `description:` are optional but recommended. The first paragraph is used as the
-> excerpt on the home page if no `description:` is given.
+> **Tip:** `date:` controls ordering and the post's URL. `category:` is
+> required (see below). `tags:` and `description:` are optional but recommended.
+> The first paragraph is used as the excerpt on the home page if no
+> `description:` is given. If only the month of a post is known, date it to the
+> first of that month.
+
+### Categories
+
+Every post has exactly one `category:`, chosen from this fixed list:
+
+| Category | Use it for | Example |
+| --- | --- | --- |
+| `news` | Announcements about the project itself: awards, grants, partnerships and changes to the team. | [Aming Tu Prize for Outstanding Creative Contribution to Digital Buddhist Studies](_posts/2026-08-31-aming-tu-prize.md) |
+| `updates` | Changes to the Dharmamitra tools and data: new features, datasets, models and integrations. | [Introducing ‘Segment View’, Expanded Datasets, and More!](_posts/2026-05-11-introducing-segment-view-expanded-datasets-and-more.md) |
+| `events` | Talks, lectures, workshops and conference presentations given or organised by the team. | [OCR and Beyond Workshop at Tohoku University](_posts/2026-03-28-ocr-and-beyond-workshop.md) |
+| `research` | Write-ups of research done with Dharmamitra tools or data, describing the methods and findings. | [Nepalese Scribes and Patrons](_posts/2026-10-02-nepalese-scribes-and-patrons.md) |
+| `publications` | Papers published by the team. | [MITRA‑zh: An efficient, open machine translation solution for Buddhist Chinese](_posts/2023-12-01-mitra-zh.md) |
+
+A `publications` post gives the full citation (authors and venue), the paper's
+abstract or a summary of it, and ends with a **Read this article** link to the
+paper. Date it to the publication date.
 
 ### Drafts
 
