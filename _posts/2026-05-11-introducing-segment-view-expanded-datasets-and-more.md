@@ -2,7 +2,7 @@
 title: "Introducing ‘Segment View’, Expanded Datasets, and More!"
 date: 2026-05-11
 author: Dharmamitra Project
-tags: [release]
+category: updates
 description: >-
   Mitra Explore and Mitra Research get major upgrades: a dedicated Segment View,
   upgraded Kangyur & Tengyur datasets, Taishō / 国訳一切経 integration, and over
@@ -43,7 +43,7 @@ Taishō canon in form of the 国訳一切経. You can now access extracts of the
 translations directly within Mitra Explore and Research, complete with links to
 the original preserved pages on [archive.org](http://archive.org).
 
-![taisho internet archive]({{ '/assets/images/taisho_internet_archive.png' | relative_url }})
+![taisho internet archive]({{ '/assets/images/taisho_internet_archive.webp' | relative_url }})
 
 ## 📈 Expanded Tibetan Datasets
 
