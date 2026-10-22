@@ -2,7 +2,6 @@
 title: "Introducing ‘Segment View’, Expanded Datasets, and More!"
 date: 2026-05-11
 author: Dharmamitra Project
-tags: [release]
 category: updates
 description: >-
   Mitra Explore and Mitra Research get major upgrades: a dedicated Segment View,

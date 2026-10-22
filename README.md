@@ -2,16 +2,45 @@
 
 Research news, releases, and updates from the [Dharmamitra Project](https://dharmamitra.org).
 
-Built with [Jekyll](https://jekyllrb.com/) and deployed to **GitHub Pages**.
-The design mirrors the Dharmamitra frontend (Noto Sans, maroon `#972e3a`
-accents, light-pink panels). **Posts publish automatically** when pushed to
+Posts are written in Markdown in this repository and appear on two sites:
+
+- **The preview site**, at
+  [dharmamitra.github.io/dharmamitra-blog](https://dharmamitra.github.io/dharmamitra-blog/).
+  It is built with [Jekyll](https://jekyllrb.com/) and GitHub Pages, and is
+  used to check post content. **Posts publish automatically** when pushed to
 `main` — no build step to run by hand.
+- **The main site** (pending release), at [dharmamitra.org/blog](https://dharmamitra.org/blog).
+  This is where users read the blog. Posts are automaticaly pulled from `main`
+  once per hour.
 
 ---
 
-## ✍️ Publishing a post (the common case)
+## 🔄 How publishing works
 
-1. Create a file in [`_posts/`](_posts/) named `YYYY-MM-DD-your-title.md`.
+1. Add or edit a post in [`_posts/`](_posts/) and commit it to `main`. The
+   GitHub web editor is enough. No software needs to be installed.
+2. The [GitHub Actions workflow](.github/workflows/jekyll.yml) rebuilds the
+   preview site. The change appears there within a few minutes.
+3. Check the post on the preview site.
+4. The main site refreshes its copy of the blog at most once an hour. The
+   change appears there about an hour after the commit. Nothing needs to be
+   done to trigger this.
+
+Both sites read the `main` branch. Every commit to `main` therefore reaches the
+main site within about an hour, whether or not it was checked on the preview
+site.
+
+If the preview build fails, GitHub shows a red cross next to the commit and, the 
+**Actions** tab shows the error.
+
+Posts that are not ready to publish go in [`_drafts/`](#drafts). Neither site
+shows drafts.
+
+---
+
+## ✍️ Creating a post
+
+1. Create a file in [`_drafts/`](#drafts), or [`_posts/`](_posts/)  named `YYYY-MM-DD-short-title.md`.
 2. Add front matter and write in Markdown:
 
    ```markdown
@@ -21,23 +50,44 @@ accents, light-pink panels). **Posts publish automatically** when pushed to
    author: Your Name
    category: updates
    tags: [release, research]
-   description: One-line summary shown on the home page and in search results.
+   description: One-line summary shown in post lists and search results.
    ---
 
-   Your content here, in **Markdown**. Images go in `assets/images/` and are
-   referenced as `![alt]({{ "/assets/images/your-image.png" | relative_url }})`.
+   Your content here, in **Markdown**. Images go in [`assets/images/`](assets/images/) and are
+   referenced as `![Group photo at the OCR and Beyond workshop]({{ '/assets/images/OCR-and-beyond-group-photo.jpg' | relative_url }})`.
    ```
 
-3. Commit and push to `main`.
+3. Commit to `main` (and, if working locally push).
 
-That's it. The [GitHub Actions workflow](.github/workflows/pages.yml) rebuilds
-the site and deploys it within a minute or two.
+   That's it. The preview site will be rebuilt and deployed within a minute or two and 
+   if the post added to [`_posts/`](_posts/) it will then be visible.
 
-> **Tip:** `date:` controls ordering and the post's URL. `category:` is
-> required (see below). `tags:` and `description:` are optional but recommended.
-> The first paragraph is used as the excerpt on the home page if no
-> `description:` is given. If only the month of a post is known, date it to the
-> first of that month.
+
+### Drafts & file names
+
+Put work-in-progress posts in [`_drafts/`](_drafts/). Neither site shows them.
+To publish a draft, move it to `_posts/` and make sure its file name starts
+with the date. Drafts can be previewed locally with `--drafts` (see the
+[Local preview](#-local-preview-optional) section below).
+
+The file name after the date becomes the post's address on the main
+site. For example, `2026-08-31-aming-tu-prize.md` is published at
+`dharmamitra.org/blog/2026-08-31-aming-tu-prize`. Use lowercase letters, digits and
+hyphens, and keep it different from every other post. **Avoid renaming the file after the post is published**, because that changes its address and breaks existing links to it.
+
+### Front matter fields
+
+| Field | Required | What it holds |
+| --- | --- | --- |
+| `title` | Yes | The post title, in quotation marks. |
+| `date` | Yes | The date as `YYYY-MM-DD`, the same as in the file name. It sets the order of posts. If only the month is known, use the first of that month. |
+| `category` | Yes | One of the five categories listed below. |
+| `description` | Yes | A summary of one or two sentences, shown in post lists and search results. Keep it under 220 characters. |
+| `author` | No | The author's name, or `Dharmamitra Project`. |
+| `tags` | No | Keywords in square brackets, for example `[prosopography, manuscripts]`. These should not overlap with categories and are unused on the main site |
+
+**The main site leaves out any post that is missing a required field or whose `category` is not in the list below.** The preview site may still show such a
+post, so check that all four required fields are present before committing.
 
 ### Categories
 
@@ -53,28 +103,36 @@ Every post has exactly one `category:`, chosen from this fixed list:
 
 A `publications` post gives the full citation (authors and venue), the paper's
 abstract or a summary of it, and ends with a **Read this article** link to the
-paper. Date it to the publication date.
+paper.
 
-### Drafts
+### Images
 
-Put work-in-progress posts in [`_drafts/`](_drafts/) (no date prefix needed).
-They won't publish. Preview them locally with `--drafts` (see below).
+Every user who opens a post downloads all of its images, so small files make
+pages load faster and use less data. Git also keeps every version of every file
+permanently. A large image stays in the repository's history even after it is
+replaced or deleted, so resize and compress each image before its first commit.
+
+- **Size.** Resize to at most 1600 pixels on the long side. Most images then
+  come to well under 400 KB.
+- **Format.** Use JPEG for photographs and PNG for screenshots, charts and
+  diagrams with flat colour or text. WebP suits both and is usually the
+  smallest. Saving a photograph as PNG makes it several times larger.
+- **Tool.** [Squoosh](https://squoosh.app/) runs in the browser and needs no
+  installation. It resizes, converts and compresses in one step, and its output
+  leaves out the photo's metadata, such as camera details and location.
+- **File names.** Use only letters, digits, hyphens and underscores. The main
+  site cannot load an image whose name contains a space.
+- **Alt text.** Describe what the image shows, for users who cannot see it.
+- **Only commit images a post uses.**
 
 ---
 
 ## 🛠️ One-time GitHub setup
 
 In the repo on GitHub: **Settings → Pages → Build and deployment → Source →
-GitHub Actions**. After that, every push to `main` deploys automatically.
+GitHub Actions**. After that, every push to `main` deploys the preview site
+automatically.
 
-The site will be served at **https://dharmamitra.github.io/dharmamitra-blog/**.
-
-### Using a custom domain (e.g. blog.dharmamitra.org)
-
-1. Add a `CNAME` file at the repo root containing the domain.
-2. In [`_config.yml`](_config.yml) set `url:` to the domain and `baseurl: ""`.
-3. Configure the DNS record at your provider and set the domain in
-   **Settings → Pages**.
 
 ---
 
@@ -90,22 +148,22 @@ bundle exec jekyll serve --drafts          # also render _drafts/
 
 > macOS ships an old system Ruby (2.6). Install a newer one with
 > [`rbenv`](https://github.com/rbenv/rbenv) or Homebrew (`brew install ruby`)
-> before running locally. Local preview is **not required** to publish — the
-> GitHub Action builds with Ruby 3.3.
+> before running locally. Local preview is **not required** to publish. The
+> GitHub Action builds the site itself.
 
 ---
 
 ## 📁 Structure
 
 ```
-_config.yml                 Site config (title, links, URLs, plugins)
-index.html                  Home page — lists all posts
-about.md                    About page
-_posts/                     ← published posts (YYYY-MM-DD-title.md)
-_drafts/                    unpublished work in progress
-_layouts/                   default · home · post · page templates
-_includes/                  head · header · footer partials
-assets/css/style.scss       theme (Dharmamitra design language)
-assets/images/              logos, favicon, and post images
-.github/workflows/pages.yml CI: build + deploy to GitHub Pages
+_config.yml                  Site config (title, links, URLs, plugins)
+index.html                   Home page — lists all posts
+about.md                     About page
+_posts/                      ← published posts (YYYY-MM-DD-title.md)
+_drafts/                     unpublished work in progress
+_layouts/                    default · home · post · page templates
+_includes/                   head · header · footer partials
+assets/css/style.scss        theme (Dharmamitra design language)
+assets/images/               logos, favicon, and post images
+.github/workflows/jekyll.yml CI: build + deploy the preview site
 ```

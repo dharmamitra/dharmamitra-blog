@@ -2,7 +2,7 @@
 title: "Nepalese Scribes and Patrons: a Prosopography from Colophons and Inscriptions"
 date: 2026-10-02
 author: Kengo Harimoto
-tags: [research, prosopography, manuscripts, inscriptions, Nepal]
+tags: [prosopography, manuscripts, inscriptions, Nepal]
 category: research
 description: >-
   A register of about 2,800 scribes, patrons, kings and officials named in Nepalese
