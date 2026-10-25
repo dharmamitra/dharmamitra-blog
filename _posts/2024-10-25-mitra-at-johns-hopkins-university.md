@@ -1,0 +1,16 @@
+---
+title: "MITRA at Johns Hopkins University"
+date: 2024-10-25
+author: Dharmamitra Project
+category: events
+description: >-
+  A talk at Johns Hopkins University on MITRA's language models for Sanskrit,
+  Tibetan, Classical Chinese and Pali, and applications beyond sentence-level
+  translation.
+---
+
+We presented "MITRA: Beyond Just Machine Translation for Premodern Asian Low Resource Languages" at Johns Hopkins University, Baltimore, MD.
+
+*Johns Hopkins University, Center for Language and Speech Processing, Baltimore, MD, USA*
+
+Recent years saw the rise of multilingual language models that achieve high levels of performance for a large number of tasks, with some of them handling hundreds of languages at once. Premodern languages are usually underrepresented in such models, leading to poor performance in downstream applications. The Dharmamitra project aims to develop a diverse set of language models to address these shortcomings for the classical Asian low-resource languages Sanskrit, Tibetan, Classical Chinese, and Pali. These models provide solutions for low-level NLP tasks such as word segmentation and morpho-syntactic tagging, as well as high-level tasks including semantic search, machine translation, and general chatbot interaction. The talk will address the individual challenges and unique characteristics of the data involved, and the strategies deployed to address these. It will also demonstrate how these different tools can be combined in an application that goes beyond simple sentence-to-sentence machine translation, providing detailed grammatical explanations and corpus-wide search to support both early-stage language learners and experienced researchers with specific demands.
