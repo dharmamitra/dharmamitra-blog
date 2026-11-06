@@ -83,11 +83,12 @@ hyphens, and keep it different from every other post. **Avoid renaming the file 
 | `date` | Yes | The date as `YYYY-MM-DD`, the same as in the file name. It sets the order of posts. If only the month is known, use the first of that month. |
 | `category` | Yes | One of the five categories listed below. |
 | `description` | Yes | A summary of one or two sentences, shown in post lists and search results. Keep it under 220 characters. |
-| `author` | No | The author's name, or `Dharmamitra Project`. |
+| `author` | No | The author's name, or `Dharmamitra Project`. Unused on the main site. |
 | `tags` | No | Keywords in square brackets, for example `[prosopography, manuscripts]`. These should not overlap with categories and are unused on the main site |
 
-**The main site leaves out any post that is missing a required field or whose `category` is not in the list below.** The preview site may still show such a
-post, so check that all four required fields are present before committing.
+**The main site leaves out any post with a badly formed file name, invalid YAML, a missing required field, a `category` not in the list below, a `date` that differs from the file name, or a file over 64 KB.** Its address then shows a "not found" page. The preview site may still show such a post. The [post check](.github/workflows/check-posts.yml) shows a red cross next to the commit, and the **Actions** tab names the post and the problem.
+
+**Put quotation marks around any value containing a colon.** `title: Foo: bar` is invalid YAML and hides the post. `title: "Foo: bar"` is correct.
 
 ### Categories
 
@@ -166,4 +167,5 @@ _includes/                   head · header · footer partials
 assets/css/style.scss        theme (Dharmamitra design language)
 assets/images/               logos, favicon, and post images
 .github/workflows/jekyll.yml CI: build + deploy the preview site
+.github/workflows/check-posts.yml CI: check posts against the main site's rules
 ```
