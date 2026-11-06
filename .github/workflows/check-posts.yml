@@ -1,0 +1,29 @@
+name: Check posts
+
+on:
+  push:
+    branches: ["main"]
+    paths:
+      - "_posts/**"
+      - ".github/scripts/check-posts.mjs"
+      - ".github/workflows/check-posts.yml"
+  pull_request:
+    paths:
+      - "_posts/**"
+      - ".github/scripts/check-posts.mjs"
+      - ".github/workflows/check-posts.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      # The version the main site uses.
+      - run: npm install --no-save --no-package-lock gray-matter@4.0.3
+      - run: node .github/scripts/check-posts.mjs
