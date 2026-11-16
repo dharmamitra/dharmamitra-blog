@@ -32,7 +32,9 @@ In the afternoon of the same day, the delegation from Fo Guang Shan visited Kata
 
 We are grateful to Fo Guang Shan for their trust and partnership, and we look forward to continuing this work together from Sendai!
 
+
 **[Original report (Chinese)](https://www.lnanews.com/news/181036)**
+
 
 ![FoGuangAI agreement photo3]({{ '/assets/images/FoGouangAI_agreement_foto3.jpeg' | relative_url }})
 
