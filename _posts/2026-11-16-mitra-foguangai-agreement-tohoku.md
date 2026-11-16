@@ -28,6 +28,7 @@ Following the signing and donation ceremonies, the delegation from Fo Guang Shan
 
 ![FoGuangAI agreement photo_kangyur]({{ '/assets/images/FoGouangAI_agreement_kangyur.jpeg' | relative_url }})
 
+
 In the afternoon of the same day, the delegation from Fo Guang Shan visited Katahira Campus, touring the Tohoku University Archives and the historic "Lu Xun Lecture Hall," which has strong historical ties to the university.
 
 We are grateful to Fo Guang Shan for their trust and partnership, and we look forward to continuing this work together from Sendai!
