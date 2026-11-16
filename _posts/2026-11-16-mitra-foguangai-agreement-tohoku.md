@@ -16,15 +16,27 @@ The signing took place at the Graduate School of Arts and Letters on the Kawauch
 
 In his remarks, Prof. Adachi welcomed the partnership and expressed his hope that it will open new opportunities for Buddhist studies and international academic exchange. Venerable Miao Guang thanked the university for its support and spoke of Fo Guang Shan’s long commitment to preserving and translating Buddhist literature, following the vision of its founder, Venerable Master Hsing Yun. She expressed the hope that responsible use of AI can help lay a foundation for Buddhist scholarship and cultural transmission in the decades ahead.
 
+![FoGuangAI agreement group photo]({{ '/assets/images/FoGouangAI_agreement_groupfoto.jpg' | relative_url }})
+![FoGuangAI agreement document]({{ '/assets/images/FoGouangAI_agreement_document.jpeg' | relative_url }})
+
+
 The next phase will focus on developing and refining FoGuangAI. We plan to draw on the newly published English edition of the Fo Guang Dictionary of Buddhism to improve the model’s handling of Buddhist terminology, textual context, and doctrinal meaning, with the goal of more accurate and consistent translations that support the work of Buddhist translators.
 
-After the ceremony, the delegation visited the Tohoku University Library to view its Derge edition of the Tibetan Buddhist canon, as well as the University Archives.
+Following the signing and donation ceremonies, the delegation from Fo Guang Shan visited the Rare Materials Room at Tohoku University Main Library, where Associate Professor Ryuta Kikuya of the Center for Integrated Japanese Studies gave an insightful presentation on the Derge edition of the Tibetan Kangyur preserved in the University's collection.
+
+![FoGuangAI agreement photo_presentation]({{ '/assets/images/FoGouangAI_agreement_foto2.jpeg' | relative_url }})
+
+![FoGuangAI agreement photo_kangyur]({{ '/assets/images/FoGouangAI_agreement_kangyur.jpeg' | relative_url }})
+
+In the afternoon of the same day, the delegation from Fo Guang Shan visited Katahira Campus, touring the Tohoku University Archives and the historic "Lu Xun Lecture Hall," which has strong historical ties to the university.
+
 We are grateful to Fo Guang Shan for their trust and partnership, and we look forward to continuing this work together from Sendai!
 
 **[Original report (Chinese)](https://www.lnanews.com/news/181036)**
 
-![FoGuangAI agreement group photo]({{ '/assets/images/FoGouangAI_agreement_groupfoto.jpg' | relative_url }})
+![FoGuangAI agreement photo3]({{ '/assets/images/FoGouangAI_agreement_foto3.jpeg' | relative_url }})
 
-![FoGuangAI agreement document]({{ '/assets/images/FoGouangAI_agreement_document.jpg' | relative_url }})
 
-![FoGuangAI agreement photo]({{ '/assets/images/FoGouangAI_agreement_foto1.jpg' | relative_url }})
+
+
+
